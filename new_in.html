@@ -47,16 +47,10 @@
 <div id="first_step">
 <table  border="0" align="center">
   <tr>
-    <td colspan="3"><h4 class="style1">Step 1 - Enquiry Information</h4></td>
+    <td colspan="3"><h4 class="style1">第一步：请检查您的身体状况</h4></td>
     </tr>
 
-  <tr>
-    <td  width="121" ><strong>Callback Date:</strong></td>
-    <td >
 
-	<input type="text" name="datepicker" id="datepicker"/></td>
-    <td >When we should contact you</td>
-    </tr>
 
   <tr>
     <td ><strong>Enquiry type:</strong></td>
@@ -75,7 +69,45 @@
     <td ><input type="text" name="website" id="website" /></td>
     <td >It will help us to know more about you</td>
     </tr>
+<tr>
+<td>
+您的医生是否说过，您有心脏方面的问题或者是高血压的问题
+</td>
+<td>
+<select name="question1" id="q1">
+	<option value="2">否</option>
+	<option value="1">是</option>
+	
+</select>
+</td>
+</tr>
 
+
+<tr>
+<td>
+您的年龄是否已经超过70岁或者不到14岁
+</td>
+<td>
+<select name="question2" id="q2">
+	<option value="0">否</option>
+	<option value="1">是</option>
+	
+</select>
+</td>
+</tr>
+
+<tr>
+<td>
+您的年龄是否已经超过70岁或者不到14岁
+</td>
+<td>
+<select name="question2" id="q2">
+	<option value="0">否</option>
+	<option value="1">是</option>
+
+</select>
+</td>
+</tr>
 </table>
             <input class="submit" type="submit" name="submit_first" id="submit_first" value="下一步" />
 </div>
