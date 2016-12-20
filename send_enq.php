@@ -7,17 +7,17 @@
 	{
 		
 	// insert your name , email and text message to your table in db
-	$datepicker = $_REQUEST['datepicker'];
-    $type = $_REQUEST['type'];
-	$website = $_REQUEST['website'];
-	$fname = $_REQUEST['fname'];
-	$city = $_REQUEST['city'];
-	$email = $_REQUEST['email'];
-	$phone = $_REQUEST['phone'];
-	$country = $_REQUEST['country'];
-	$offers = $_REQUEST['offers'];
-	$SMS = $_REQUEST['SMS'];
-	$newsletter = $_REQUEST['newsletter'];
+	$q1 = $_REQUEST['q1'];
+    $q2 = $_REQUEST['q2'];
+	$q3 = $_REQUEST['q3'];
+    $q4 = $_REQUEST['q4'];
+	$q5 = $_REQUEST['q5'];
+    $q6 = $_REQUEST['q6'];
+	$q7 = $_REQUEST['q7'];
+    $q8 = $_REQUEST['q8'];
+	$q9 = $_REQUEST['q9'];
+
+
 	// Do Not Modify Below
 
 		//adding to database

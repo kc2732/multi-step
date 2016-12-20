@@ -28,7 +28,6 @@ display: block;
     #container #first_step, #second_step, #third_step, #fourth_step, #finish_step { display: none; }
     #container #first_step { display: block; }
     #container .form { margin: 6px 0px 10px 122px; }
-	.form2 { margin: 0px 50px 30px 150px; }
     
     #container h1, #container h2 {
         font-family: Tahoma, Arial, sans-serif;;
@@ -52,7 +51,7 @@ display: block;
     
     #container table {
         font-size: 12px;
-		margin-top:-20px;
+		/*margin-top:-20px;*/
     }
 
 	#container table .smalltxt {
@@ -103,9 +102,7 @@ display: block;
             /*background: url('../images/button.png') no-repeat;*/
             border: none;
             cursor: pointer;
-            width: 50px;
-            height: 54px;
-            position: absolute;
+            /*position: absolute;*/
             bottom: 2px;
             right: 50px;
 			/*top: 246px;*/
@@ -114,7 +111,7 @@ display: block;
         
         #container input.send{ 
             /*background: url('../images/button.png') no-repeat; */
-		    position: absolute;
+		    /*position: absolute;*/
             bottom: 2px;
             right: 50px;
 			/*top: 246px;*/
@@ -122,7 +119,6 @@ display: block;
 	
 	 #container input.back{ 
             /*background: url('../images/back.png') no-repeat;*/
-            position: absolute;
             bottom: 2px;
             left: 100px;
 			/*top: 246x;*/
@@ -137,7 +133,7 @@ display: block;
             color: #000;
         }
 
-    #container select { padding: 5px 0 5px 7px; }
+
         #container option { padding: 0 15px; }
 
     #container label {

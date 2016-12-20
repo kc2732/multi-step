@@ -3,8 +3,6 @@ $(function(){
     var field_values = {
             //id        :  value
             'phone'  : 'enter your phone',
-            'datepicker'  : 'datepicker',
-            'country' : 'country',
             'firstname'  : 'enter your full name',
 			'city'  : 'enter city',
 			'type'  : 'type',
@@ -16,7 +14,6 @@ $(function(){
     //inputfocus
     $('input#phone').inputfocus({ value: field_values['phone'] });
 	$('input#type').inputfocus({ value: field_values['type'] });
-    $('input#datepicker').inputfocus({ value: field_values['DD/MM/YYYY'] });
     $('input#country').inputfocus({ value: field_values['country'] }); 
     $('input#website').inputfocus({ value: field_values['website'] });
     $('input#firstname').inputfocus({ value: field_values['firstname'] });
@@ -25,9 +22,6 @@ $(function(){
 
 
     //reset progress bar
-    $('#progress').css('width','0');
-    $('#progress_text').html('0% Complete');
-
     //first_step
     $('form').submit(function(){ return false; });
     $('#submit_first').click(function(){
@@ -59,9 +53,6 @@ $(function(){
                     return false;
             } else {   
                 //update progress bar
-                $('#progress_text').html('33% Complete');
-                $('#progress').css('width','113px');
-                
                 //slide steps
                 $('#first_step').slideUp();
                 $('#second_step').slideDown();     
@@ -91,8 +82,6 @@ $(function(){
 
         if(!error) {
                 //update progress bar
-                $('#progress_text').html('66% Complete');
-                $('#progress').css('width','226px');
                 
                 //slide steps
                 $('#second_step').slideUp();
@@ -104,8 +93,6 @@ $(function(){
 
     $('#submit_third').click(function(){
         //update progress bar
-        $('#progress_text').html('100% Complete');
-        $('#progress').css('width','239px');
 
         //prepare the fourth step
         var fields = new Array(
@@ -131,10 +118,9 @@ $(function(){
     $('#submit_fourth').click(function(){
         //send information to server
         $('.back').hide();
-		$('#progress_bar').css('display', 'none');
 		$('#fourth_step').slideUp();
         $('#finish_step').slideDown();
-		$.post("send_enq.php?"+$("#online_booking").serialize(), {
+		$.post("send_enq.php?"+$("#online_register").serialize(), {
 		
 			}, 
 			function(response){
@@ -156,23 +142,8 @@ $(function(){
     
     //back button
    $('.back').click(function(){
-        var container = $(this).parent('div'),
+        var container = $(this).parent('div `'),
             previous  = container.prev();
-
-        switch(previous.attr('id')) {
-            case 'first_step' : $('#progress_text').html('0% Complete');
-                                 $('#progress').css('width','0px');
-                                 break;
-            case 'second_step': $('#progress_text').html('33% Complete');
-                                 $('#progress').css('width','113px');
-                                 break;
-            
-            case 'third_step' : $('#progress_text').html('66% Complete');
-                                 $('#progress').css('width','226px');
-                                 break;
-            
-            default: break;
-        }
             
         $(container).slideUp();
         $(previous).slideDown();
